@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+  <update handle="default_head_blocks"/>
+  <body>
+
+    <referenceContainer name="header.container">
+      <container name="tops-headers" htmlClass="tops-headers" htmlTag="div" before="-">
+        <block class="Magento\Framework\View\Element\Template" name="tops.headers" template="Magento_Theme::html/custom-header.phtml" />
+      </container>
+      <container name="middle-header" htmlClass="middle-header" htmlTag="div" after="tops-headers">
+       <container htmlTag="div" htmlClass="container" >
+        <container htmlTag="div" htmlClass="row" >
+          <container htmlTag="div" htmlClass="col-md-6" >
+            <block class="Magento\Framework\View\Element\Template" name="content.lefts" template="Magento_Theme::html/middle-header-left.phtml" />
+          </container>
+          <container name="middle-header-right" htmlTag="div" htmlClass="col-md-6">
+
+          </container>
+          
+        </container>
+      </container>
+
+      
+    </container>
+
+
+    <!--    header-bottom -->
+    <container name="header-bottom" htmlClass="header-bottom" htmlTag="div" after="middle-header">
+      <container  htmlClass="container" htmlTag="div" >
+
+        <container htmlClass="row" htmlTag="div">
+          <container htmlClass="col-md-4" htmlTag="div">
+            <block class="Magento\Framework\View\Element\Template" name="header-bottom-left" template="Magento_Theme::html/header/header-bottom-left.phtml" />
+          </container>
+          <container name="logo-infomation" htmlClass="col-md-4 custom-logo-bottom" htmlTag="div" />
+          <container htmlClass="col-md-4" htmlTag="div"></container>
+        </container>
+
+      </container>
+
+    </container>
+
+
+
+  </referenceContainer>
+
+
+  <referenceContainer name="footer-container">
+    <container htmlClass="container" htmlTag="div">
+      <container htmlClass="row" htmlTag="div">
+        <container htmlClass="col-md-3" htmlTag="div">
+          <block class="Magento\Framework\View\Element\Template" name="address.footer" template="Magento_Theme::html/footer/address.phtml" />
+        </container>
+        <container htmlClass="col-md-3" htmlTag="div">
+          <block class="Magento\Framework\View\Element\Template" name="popular_tag.footer" template="Magento_Theme::html/footer/popular_tag.phtml" />
+
+        </container>
+        <container htmlClass="col-md-3" htmlTag="div">
+         <block class="Magento\Framework\View\Element\Template" name="shipping.footer" template="Magento_Theme::html/footer/shipping.phtml" />
+       </container>
+       <container htmlClass="col-md-3" htmlTag="div" name="footer.newletter">
+
+       </container>
+
+     </container>
+
+   </container>
+ </referenceContainer>
+
+
+ <!-- move content -->
+
+ <move element="currency" destination="middle-header-right"/>
+ <move element="form.subscribe" destination="footer.newletter" before="-" />
+ <move element="logo" destination="logo-infomation"/>
+
+
+
+
+
+
+ <!-- delete content -->
+ <referenceBlock name="footer_links" remove="true" />
+
+
+ <!--  custom logo -->
+ <referenceBlock name="logo">
+  <arguments>
+    <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+    <argument name="logo_alt" xsi:type="string">AHT Hashion</argument>
+    <argument name="logo_img_width" xsi:type="number">198</argument>
+    <argument name="logo_img_height" xsi:type="number">66</argument>
+  </arguments>
+</referenceBlock>
+
+
+</body>
+</page>
