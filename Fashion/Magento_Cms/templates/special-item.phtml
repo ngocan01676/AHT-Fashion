@@ -1,0 +1,69 @@
+
+<div class="container special-item">
+	<div class="row-s">
+		<div class="col-md-6 slide-1">
+			<div class="title">SPECIAL ITEMS</div>
+			<?php
+			echo $this->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId('best-seller1')
+			->toHtml();
+			?>
+		</div>
+		<div class="col-md-6 slide-2">
+			<div class="title">MAY YOU LIKE</div>
+			<?php
+			echo $this->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId('best-seller1')
+			->toHtml();
+			?>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+<script>
+	require(['jquery', 'slick'], function ($) {
+
+		$('.special-item .product-items.widget-product-grid').addClass('regular slider');
+		$(".regular").slick({
+			dots: false,
+			infinite: true,
+			slidesToShow: 2,
+			slidesToScroll: 2,
+			rows:2,
+			responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+
+					infinite: true,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+
+			]
+		});
+
+
+
+	});
+</script>

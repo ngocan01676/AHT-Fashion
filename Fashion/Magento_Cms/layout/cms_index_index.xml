@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<update handle="default_head_blocks"/>
+	<body>
+
+		<referenceContainer name="main.content">
+			<block class="Magento\Framework\View\Element\Template" name="image.seller" template="Magento_Cms::image-seller.phtml" before="-"/>
+			<block class="Magento\Framework\View\Element\Template" name="tab.one" template="Magento_Cms::tab-one.phtml" after="image.seller" />
+
+			<referenceContainer name="countdown" htmlClass="countdown-first" htmlTag="div">
+				<block class="Magento\Framework\View\Element\Template" name="countdowns" template="Magento_Cms::countdown.phtml"  />
+			</referenceContainer>
+			<container name="special-item" after="countdown">
+
+				<block class="Magento\Framework\View\Element\Template" name="special-items" template="Magento_Cms::special-item.phtml"  />
+			</container>
+			<container name="list-category" after="special-item">
+				<block class="Magento\Framework\View\Element\Template" name="list-categorys" template="Magento_Cms::category-list.phtml"  />
+
+			</container>
+			<container name="blog-list" after="list-category">
+
+				<block class="Magento\Framework\View\Element\Template" name="list-blogs" template="Magento_Cms::blog.phtml"  />
+			</container>
+
+		</referenceContainer>
+
+
+
+	</body>
+</page>

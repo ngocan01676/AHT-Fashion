@@ -1,0 +1,19 @@
+<div class="countdown">
+
+	<div class="countdowns">
+		<div><img class="images" src="<?php echo $block->getViewFileUrl('images/countdown.jpg'); ?>" /></div>
+		<div class="move-to">
+			<?php
+			echo $this->getLayout()
+			->createBlock('Magento\Cms\Block\Block')
+			->setBlockId('countdown')
+			->toHtml();
+			?>
+			
+		</div>
+	</div>
+
+
+
+
+</div>

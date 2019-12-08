@@ -1,0 +1,802 @@
+@import '../lib/owl.carousel/_owl.carousel.min.less';
+@import '../lib/owl.carousel/_owl.carousel.min.less';
+@import '../lib/slick/slick.less';
+@import '../lib/slick/slick-theme.less';
+
+
+& when (@media-common =true) {
+    .cms-index-index {
+        .page-main {
+
+            // .columns{
+            //   display: none;
+            //   .column.main{
+            //     padding: 0 ;
+            //   }
+
+
+            // }
+            .image-seller {
+                .col-md-3:last-child {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+            }
+
+            // 2016 TRENDING
+            // 
+            .main-contents {
+                position: relative;
+
+                .content-seller {
+                    text-align: center;
+                    margin-top: 40px;
+                    color: #707070;
+                    opacity: 0.5;
+
+                    h3 {
+
+                        font-size: 85px;
+                        font-weight: 100;
+
+                    }
+
+                }
+
+                .move-center {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    span {
+                        font-size: 28px;
+                        font-weight: 700;
+                        margin-left: 31px;
+                        margin-right: 20px;
+                    }
+
+                    .images {
+                        height: 14px;
+
+                        &.left {
+                            margin-right: 6px;
+                        }
+
+                        &.right {
+                            margin-left: 6px;
+                        }
+                    }
+
+                }
+
+            }
+
+
+            .seller-tab-one {
+
+
+
+
+
+                div.product.data.items {
+                    text-align: center;
+                    margin-bottom: 0 !important;
+
+                    div.item.content {
+                        border: none !important;
+                        padding: 0 !important;
+
+                        .block.widget.block-products-list.grid {
+                            min-height: 365px;
+
+                            .block-content {
+                                .products-grid.grid {
+                                    .product-items.widget-product-grid {
+
+                                        .owl-nav {
+
+                                            button {
+                                                position: absolute;
+                                                top: 50%;
+
+                                                color: #666;
+                                                margin: 0;
+                                                transition: all 0.3s ease-in-out;
+                                                box-shadow: none;
+                                            }
+
+                                            button.owl-prev {
+                                                left: -3%;
+                                            }
+
+                                            button.owl-next {
+                                                right: -3%;
+                                            }
+
+
+
+
+                                            button {
+                                                position: absolute;
+                                                top: 50%;
+                                                transform: translateY(-50%);
+                                                background: rgba(255, 255, 255, 0.38) !important;
+
+                                            }
+
+                                            span {
+                                                font-size: 70px;
+                                                position: relative;
+                                                top: -5px;
+                                            }
+
+                                            button:focus {
+                                                outline: none;
+                                            }
+
+                                        }
+
+                                        .product-item {
+                                            .product-item-info {
+                                                position: relative;
+
+                                                .product-item-details {
+                                                    .price-box.price-final_price {
+                                                        .price-container.price-final_price.tax.weee {
+                                                            .price-wrapper {
+                                                                .price {
+                                                                    color: red;
+                                                                }
+                                                            }
+                                                        }
+
+                                                        .special-price {
+                                                            .price-container.price-final_price.tax.weee {
+                                                                .price-wrapper {
+                                                                    .price {
+                                                                        color: red;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+
+                                                        .old-price.price-change {
+                                                            .price-container.price-final_price.tax.weee {
+                                                                .price-label {
+                                                                    display: none;
+                                                                }
+
+                                                                .price-wrapper {
+                                                                    .price {
+                                                                        color: black;
+                                                                        text-decoration: line-through;
+                                                                        margin-left: 5px;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+
+                                                    .product-item-inner {
+                                                        position: absolute;
+                                                        z-index: 9999999;
+                                                        left: 5px;
+                                                        bottom: 30%;
+                                                        box-shadow: none !important;
+
+                                                        .product-item-actions {
+                                                            display: flex;
+                                                            flex-direction: column;
+
+                                                            .actions-secondary {
+                                                                display: flex !important;
+                                                                flex-direction: column;
+
+                                                                a.action.towishlist {
+                                                                    width: 40px !important;
+                                                                    height: 40px !important;
+                                                                    text-align: center;
+                                                                    line-height: 40px !important;
+                                                                    background: white;
+
+                                                                }
+
+                                                                a.action.tocompare {
+
+                                                                    width: 40px !important;
+                                                                    height: 40px !important;
+                                                                    text-align: center;
+                                                                    line-height: 40px !important;
+                                                                    background: white;
+                                                                    margin-top: 5px;
+                                                                }
+
+                                                            }
+
+                                                            .actions-primary {
+                                                                .action.tocart.primary {
+                                                                    border: none;
+                                                                    max-width: 40px !important;
+                                                                    padding: 0px 11px 10px !important;
+                                                                    overflow: hidden;
+                                                                    transition: all 1s;
+                                                                    height: 40px !important;
+                                                                    text-align: center;
+                                                                    line-height: 40px !important;
+                                                                    background: white;
+                                                                    color: #707070;
+                                                                    transition: all 1s;
+                                                                    margin-bottom: 5px;
+
+                                                                    &:before {
+                                                                        content: "\f290";
+                                                                        font-family: "Font Awesome 5 Free";
+                                                                        margin-right: 3px;
+                                                                        font-weight: 600;
+                                                                        font-size: 18px;
+                                                                    }
+
+                                                                    span {
+                                                                        margin-left: 9px;
+                                                                    }
+
+                                                                    &:hover {
+                                                                        max-width: 120px !important;
+                                                                        background: #d35400 !important;
+                                                                        color: white !important;
+
+                                                                    }
+
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+
+
+                    }
+
+                    .item.title {
+                        float: none !important;
+                        display: inline-block;
+
+                        .switch {
+                            background: white;
+                            border: none;
+                            color: black;
+                            font-weight: 600;
+
+                            &:before {
+
+                                content: '\f00d\00a0\00a0';
+                                font-family: "Font Awesome 5 Free";
+                                font-weight: 600;
+
+                            }
+                        }
+
+                        &.active {
+
+                            .switch {
+
+                                color: red;
+                                font-weight: 600;
+
+                                &:before {
+
+                                    content: '\f00c\00a0\00a0';
+                                    font-family: "Font Awesome 5 Free";
+                                    font-weight: 600;
+                                    opacity: 0.4;
+
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+            //SPECIAL ITEM 
+            .special-item {
+                margin-top: 50px;
+
+                .title {
+                    font-size: 28px;
+                    font-weight: 700;
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 40%;
+                        width: 45%;
+                        border: 0.5px solid #cebfbf;
+                        font-weight: 100;
+
+                    }
+                }
+
+
+                .product-items.widget-product-grid.regular.slider.slick-initialized.slick-slider {
+                    .slick-list.draggable {
+                        .slick-track {
+                            .product-item-info {
+                                display: flex;
+
+                                a.product-item-photo {
+                                    width: 100px;
+                                    height: 142px;
+                                }
+
+                                .product-item-details {
+                                    .price-box.price-final_price {
+                                        .price-container.price-final_price.tax.weee {
+                                            .price-wrapper {
+                                                .price {
+                                                    color: red;
+                                                }
+                                            }
+                                        }
+
+                                        .special-price {
+                                            .price-container.price-final_price.tax.weee {
+                                                .price-wrapper {
+                                                    .price {
+                                                        color: red;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .old-price.price-change {
+                                            .price-container.price-final_price.tax.weee {
+                                                .price-label {
+                                                    display: none;
+                                                }
+
+                                                .price-wrapper {
+                                                    .price {
+                                                        color: black;
+                                                        text-decoration: line-through;
+                                                        margin-left: 5px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    text-align: left;
+                                    padding-left: 22px;
+
+                                    .product-item-inner {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            //BLOG LIST
+            .blog-list {
+
+                .main-contents {
+                    position: relative;
+
+                    .content-seller {
+                        text-align: center;
+                        margin-top: 40px;
+                        color: #707070;
+                        opacity: 0.5;
+
+                        h3 {
+
+                            font-size: 85px;
+                            font-weight: 100;
+
+                        }
+
+                    }
+
+                    .move-center {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+
+                        span {
+                            font-size: 28px;
+                            font-weight: 700;
+                            margin-left: 80px;
+                            margin-right: 80px;
+                        }
+
+                        .images {
+                            height: 14px;
+
+                            &.left {
+                                margin-right: 6px;
+                            }
+
+                            &.right {
+                                margin-left: 6px;
+                            }
+                        }
+
+                    }
+
+                }
+
+                .tab-ngang {
+                    display: flex;
+                    margin-bottom: 25px;
+
+                    .tab-ngang-1 {
+                        width: 80%;
+                        height: 1px;
+                        background: #b7b1b1;
+                        font-weight: 100;
+
+                        &:not(:first-child) {
+                            margin-left: 60px;
+                        }
+                    }
+                }
+
+                .owl-carousel.owl-theme.owl-theme-blog.owl-loaded.owl-drag {
+                    .owl-nav {
+
+                        font-size: 60px;
+                        position: absolute;
+                        top: -12%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+
+                        &:before {
+                            font-weight: 100;
+                            content: '.';
+                            position: absolute;
+                            color: #707070;
+                            top: 35%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+
+
+                        }
+
+                        .owl-prev {
+                            background: none;
+                            box-shadow: none;
+                            color: #707070;
+
+                            &:hover {
+                                background: none;
+                                color: red;
+
+                            }
+
+                            span {
+                                font-weight: 100;
+                            }
+
+                        }
+
+
+                        .owl-next {
+                            background: none;
+                            box-shadow: none;
+                            color: #707070;
+
+                            &:hover {
+                                background: none;
+                                color: red;
+
+                            }
+
+                            span {
+                                font-weight: 100;
+                            }
+
+                        }
+
+
+
+                    }
+                }
+
+                .item {
+                    display: flex;
+
+
+                    .images-blog {
+                        .images-blogs {
+                            width: 300px;
+                            height: 300px;
+                            max-width: inherit;
+                        }
+
+                    }
+
+                    .content {
+                        padding: 25px 0 0 15px;
+
+                        .title {
+                            font-weight: bold;
+                            font-size: 20px;
+
+                        }
+
+                        .contents {
+                            margin-top: 12px;
+
+                            span {
+                                color: red;
+                            }
+                        }
+
+                        .time-line {
+                            display: flex;
+                            margin-top: 15px;
+                            justify-content: space-between;
+
+                            i {
+                                margin-right: 7px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            //category-list
+            .category-list {
+                margin-top: 15px;
+
+                .wrapper {
+                    position: relative;
+
+                    .content {
+                        position: absolute;
+                        top: 5%;
+                        left: 5%;
+
+                        .btn-button {
+                            box-shadow: none;
+                            border-radius: 0px;
+                            transition: all 1s;
+
+                            &:hover {
+                                background-color: #ff793f;
+                                color: white;
+                                border: 1px solid #ff793f;
+                            }
+                        }
+
+                        h3 {
+                            font-size: 22px;
+                            font-weight: 600;
+
+                        }
+
+                        .first {
+                            font-size: 25px;
+                            font-weight: bold;
+
+                            .widget.block.block-category-link {
+                                a {
+                                    color: black;
+                                }
+                            }
+                        }
+
+                        .widget.block.block-category-link {
+                            margin-bottom: 0;
+
+                            a {
+                                text-decoration: none;
+                                color: black;
+                                font-weight: 600;
+
+
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            //COUNTDOWN
+            .countdown-first {
+
+                .countdown {
+                    .countdowns {
+                        position: relative;
+
+                        .images {
+                            min-height: 530px;
+                        }
+
+                        .move-to {
+                            position: absolute;
+                            right: 12%;
+                            top: 12%;
+
+                            .products-grid.grid {
+                                .product-items.widget-product-grid {
+                                    .product-item {
+                                        width: 400px;
+
+                                        .product-item-info {
+                                            h2 {
+                                                font-weight: 500;
+                                            }
+
+                                            .product-item-photo {
+                                                display: none;
+                                            }
+
+                                            .product-item-details {
+                                                width: 400px;
+                                                text-align: left;
+
+                                                .short-description {
+                                                    font-size: 20px;
+                                                }
+
+                                                .product-item-name {
+                                                    font-size: 25px;
+                                                    font-weight: 600;
+
+                                                }
+
+                                                .timer {
+                                                    display: flex;
+
+                                                    .style-one {
+                                                        display: flex;
+                                                        flex-direction: column;
+                                                        font-size: 22px;
+
+                                                        &:first-child {
+                                                            padding: 15px 0px;
+                                                        }
+
+                                                        &:not(:first-child) {
+                                                            padding: 15px 15px;
+                                                        }
+
+                                                        span:last-child {
+                                                            padding: 5px 10px;
+                                                            -webkit-box-shadow: -1px 2px 5px 0px rgba(50, 50, 50, 0.75);
+                                                            -moz-box-shadow: -1px 2px 5px 0px rgba(50, 50, 50, 0.75);
+                                                            box-shadow: -1px 2px 5px 0px rgba(50, 50, 50, 0.75);
+                                                            background: -moz-linear-gradient(90deg, #333333 0%, #000000 48%, #3a3a3a 51%, #414141 100%);
+                                                            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #414141), color-stop(49%, #3a3a3a), color-stop(52%, #000000), color-stop(100%, #333333));
+                                                            background: -webkit-linear-gradient(90deg, #333333 0%, #000000 48%, #3a3a3a 51%, #414141 100%);
+                                                            background: -o-linear-gradient(90deg, #333333 0%, #000000 48%, #3a3a3a 51%, #414141 100%);
+                                                            background: -ms-linear-gradient(90deg, #333333 0%, #000000 48%, #3a3a3a 51%, #414141 100%);
+                                                            background: linear-gradient(0deg, #333333 0%, #000000 48%, #3a3a3a 51%, #414141 100%);
+                                                            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#414141', endColorstr='#333333', GradientType=0);
+                                                            color: white;
+                                                            text-align: center;
+                                                            margin-top: 10px;
+                                                            border: 1px solid #fff;
+
+                                                        }
+
+
+                                                    }
+
+
+                                                }
+
+                                                .product-item-inner {
+                                                    box-shadow: none !important;
+                                                    margin: 0 !important;
+                                                    clip: none !important;
+                                                    height: 100% !important;
+                                                    width: 100% !important;
+                                                    position: static !important;
+                                                    overflow: inherit;
+
+                                                    .product-item-actions {
+                                                        .actions-primary {
+                                                            .action.tocart.primary {
+                                                                background: white;
+                                                                border: none;
+                                                                color: #666;
+
+                                                                &:before {
+                                                                    content: "\f290";
+                                                                    font-family: "Font Awesome 5 Free";
+                                                                    margin-right: 3px;
+                                                                    font-weight: 600;
+                                                                    font-size: 18px;
+                                                                }
+
+                                                                span {
+                                                                    display: none;
+                                                                }
+                                                            }
+                                                        }
+
+                                                        .actions-secondary {
+                                                            a.action.towishlist {
+                                                                background: white;
+                                                                margin-left: 10px;
+                                                                padding: 1px 13px;
+                                                                overflow: inherit;
+                                                                width: auto !important;
+                                                            }
+
+                                                            a.action.tocompare {
+                                                                background: white;
+                                                                margin-left: 10px;
+                                                                padding: 1px 13px;
+                                                                overflow: inherit;
+                                                                width: auto !important;
+
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                                .price-box.price-final_price {
+                                                    .special-price {
+                                                        color: red;
+                                                        font-size: 25px !important;
+                                                        margin-right: 10px;
+                                                    }
+
+                                                    .price-label {
+                                                        display: none;
+                                                    }
+
+                                                    .old-price.price-change {
+                                                        .price-container.price-final_price.tax.weee {
+                                                            .price-wrapper {
+                                                                .price {
+                                                                    text-decoration: line-through;
+                                                                    font-size: 25px;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                }
+
+
+                            }
+                        }
+                    }
+
+                }
+
+
+            }
+
+
+
+
+        }
+
+    }
+
+}

@@ -9,7 +9,7 @@
       </container>
       <container name="middle-header" htmlClass="middle-header" htmlTag="div" after="tops-headers">
        <container htmlTag="div" htmlClass="container" >
-        <container htmlTag="div" htmlClass="row" >
+        <container htmlTag="div" htmlClass="row-s" >
           <container htmlTag="div" htmlClass="col-md-6" >
             <block class="Magento\Framework\View\Element\Template" name="content.lefts" template="Magento_Theme::html/middle-header-left.phtml" />
           </container>
@@ -28,14 +28,26 @@
     <container name="header-bottom" htmlClass="header-bottom" htmlTag="div" after="middle-header">
       <container  htmlClass="container" htmlTag="div" >
 
-        <container htmlClass="row" htmlTag="div">
+        <container htmlClass="row-s" htmlTag="div">
           <container htmlClass="col-md-4" htmlTag="div">
             <block class="Magento\Framework\View\Element\Template" name="header-bottom-left" template="Magento_Theme::html/header/header-bottom-left.phtml" />
           </container>
-          <container name="logo-infomation" htmlClass="col-md-4 custom-logo-bottom" htmlTag="div" />
-          <container htmlClass="col-md-4" htmlTag="div"></container>
+          <container name="logo-infomation" htmlClass="col-md-4 custom-logo-bottom" htmlTag="div">
+            <container  htmlTag="div" htmlClass="img-bottom" name="logo-infomation-child"/>
+          </container>
+          <container htmlClass="col-md-4 sign-in-cart" htmlTag="div" name="header-bottom-right"/>
         </container>
 
+      </container>
+
+    </container>
+    <!--  navigation-bottom -->
+    <container name="navigation-bottom" htmlClass="navigation-bottom" htmlTag="div" after="header-bottom">
+      <container htmlClass="container" htmlTag="div">
+        <container htmlTag="div" htmlClass="row-s">
+          <container htmlClass="col-md-9" htmlTag="div" name="move-navigation-bottom" />
+          <container htmlClass="col-md-3" htmlTag="div" name="move-search-bottom" />
+        </container>
       </container>
 
     </container>
@@ -47,24 +59,26 @@
 
   <referenceContainer name="footer-container">
     <container htmlClass="container" htmlTag="div">
-      <container htmlClass="row" htmlTag="div">
-        <container htmlClass="col-md-3" htmlTag="div">
+      <container htmlClass="row-s" htmlTag="div">
+        <container htmlClass="col-md-6 col-sm-6 col-lg-3" htmlTag="div">
           <block class="Magento\Framework\View\Element\Template" name="address.footer" template="Magento_Theme::html/footer/address.phtml" />
         </container>
-        <container htmlClass="col-md-3" htmlTag="div">
+        <container htmlClass="col-md-6 col-sm-6 col-lg-3" htmlTag="div">
           <block class="Magento\Framework\View\Element\Template" name="popular_tag.footer" template="Magento_Theme::html/footer/popular_tag.phtml" />
 
         </container>
-        <container htmlClass="col-md-3" htmlTag="div">
+        <container htmlClass="col-md-6 col-sm-6 col-lg-3" htmlTag="div">
          <block class="Magento\Framework\View\Element\Template" name="shipping.footer" template="Magento_Theme::html/footer/shipping.phtml" />
        </container>
-       <container htmlClass="col-md-3" htmlTag="div" name="footer.newletter">
-
-       </container>
+       <container htmlClass="col-md-6 col-sm-6 col-lg-3" htmlTag="div" name="footer.newletter" />
+       <block class="Magento\Framework\View\Element\Template" name="content.lefts.bar" template="Magento_Theme::html/footer/scrolltotop.phtml" after="-"/>
 
      </container>
 
    </container>
+
+
+   <block class="Magento\Framework\View\Element\Template" name="custom-js" template="Magento_Theme::custom-js.phtml" />
  </referenceContainer>
 
 
@@ -72,8 +86,11 @@
 
  <move element="currency" destination="middle-header-right"/>
  <move element="form.subscribe" destination="footer.newletter" before="-" />
- <move element="logo" destination="logo-infomation"/>
-
+ <move element="logo" destination="logo-infomation-child"/>
+ <move element="header.panel" destination="header-bottom-right" />
+ <move element="navigation.sections" destination="move-navigation-bottom" />
+ <move element="top.search" destination="move-search-bottom"/>
+ <move element="minicart" destination="header-bottom-right" after="-" />
 
 
 
@@ -81,6 +98,8 @@
 
  <!-- delete content -->
  <referenceBlock name="footer_links" remove="true" />
+ <referenceContainer name="header-wrapper" remove="true" />
+
 
 
  <!--  custom logo -->

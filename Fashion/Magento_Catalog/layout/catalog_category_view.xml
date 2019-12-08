@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<page layout="2columns-left" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		
+		<script src="Magento_Catalog::js/script.js" />
+	</head>
+	<body>
+
+		
+		<referenceBlock name="content">
+			<block class="Magento\Framework\View\Element\Template" name="slider.category" template="Magento_Catalog::slider/slider.phtml" before="-"/>
+			<block class="Magento\Framework\View\Element\Template" name="content.lefts.bar" template="Magento_Catalog::bar/bar.phtml" before="-"/>
+			<block class="Magento\Framework\View\Element\Template" name="scolltotop" template="Magento_Theme::html/footer/scrolltotop.phtml" after="-"/>
+
+		</referenceBlock>
+
+
+		<!-- <referenceBlock name="breadcrumbs" remove="true" /> -->
+		<referenceBlock name="page.main.title" remove="true" />
+		
+
+		
+	</body>
+</page>

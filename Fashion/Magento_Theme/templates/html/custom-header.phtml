@@ -1,6 +1,21 @@
 <div class="header-tops">
 	<div class="nenden"></div>
 	<img class="images" src="<?php echo $block->getViewFileUrl('images/header.png'); ?>" />
-	<p class="content"><span class="text-1">25% OFF* </span><span class="text-2"></span>FOR A LIMITED TIME ONLY <span class="text-3">ENTER PROMO CODE: trend.Fashion</span></p>
+	<div class="container">
+		<p class="content"><span class="text-1">25% OFF* </span><span class="text-2"></span>FOR A LIMITED TIME ONLY <span class="text-3">ENTER PROMO CODE: trend.Fashion</span><span class="exit"><i class="fas fa-times"></i></span></p>
+
+	</div>
+
 </div>
 
+<script>
+	require(['jquery'],function($){
+            
+            $('.exit').on('click',function(){
+
+
+            	$('.tops-headers').slideUp(1000);
+
+            });
+	});
+</script>

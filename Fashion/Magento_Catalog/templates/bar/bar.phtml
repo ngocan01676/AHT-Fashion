@@ -1,0 +1,40 @@
+<script>
+	require(['jquery'], function ($) {
+
+
+		$(function(){
+
+
+			$('.page-layout-1column .column.main .toolbar.toolbar-products').first().prepend('<div class="dropdown-layout-1-column"><span class="bar fas fa-bars"></span></div>');
+			// $('.page-layout-1column .block-content.filter-content').appendTo('.dropdown-layout-1-column');
+
+			$('.bar').on('click',function(){
+
+				if($('.bar').hasClass('fa-bars'))
+				{
+					$(this).removeClass('fa-bars');
+					$(this).addClass('fa-times');
+				}else{
+
+					$(this).removeClass('fa-times');
+					$(this).addClass('fa-bars');
+
+				}
+
+
+				$('.page-layout-1column .block-content.filter-content').toggleClass('active');
+				// $('.page-layout-1column .block-content.filter-content.active').animate({
+				// 	top: '40px',
+
+
+				// },"slow");
+
+
+			});
+
+		});
+		
+
+
+	});
+</script>
