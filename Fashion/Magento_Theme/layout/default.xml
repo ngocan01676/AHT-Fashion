@@ -45,8 +45,8 @@
     <container name="navigation-bottom" htmlClass="navigation-bottom" htmlTag="div" after="header-bottom">
       <container htmlClass="container" htmlTag="div">
         <container htmlTag="div" htmlClass="row-s">
-          <container htmlClass="col-md-9" htmlTag="div" name="move-navigation-bottom" />
-          <container htmlClass="col-md-3" htmlTag="div" name="move-search-bottom" />
+          <container htmlClass="col-md-11 col-lg-9" htmlTag="div" name="move-navigation-bottom" />
+          <container htmlClass="col-md-1 col-lg-3" htmlTag="div" name="move-search-bottom" />
         </container>
       </container>
 
@@ -111,6 +111,7 @@
     <argument name="logo_img_height" xsi:type="number">66</argument>
   </arguments>
 </referenceBlock>
+
 
 
 </body>

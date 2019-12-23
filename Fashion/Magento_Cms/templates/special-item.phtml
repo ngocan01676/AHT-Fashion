@@ -1,21 +1,21 @@
 
-<div class="container special-item">
+<div class="special-item container">
 	<div class="row-s">
 		<div class="col-md-6 slide-1">
-			<div class="title">SPECIAL ITEMS</div>
+			<div class="title"><span class="titles">SPECIAL ITEMS</span></div>
 			<?php
 			echo $this->getLayout()
 			->createBlock('Magento\Cms\Block\Block')
-			->setBlockId('best-seller1')
+			->setBlockId('red')
 			->toHtml();
 			?>
 		</div>
 		<div class="col-md-6 slide-2">
-			<div class="title">MAY YOU LIKE</div>
+			<div class="title"><span class="titles">MAY YOU LIKE</span></div>
 			<?php
 			echo $this->getLayout()
 			->createBlock('Magento\Cms\Block\Block')
-			->setBlockId('best-seller1')
+			->setBlockId('red')
 			->toHtml();
 			?>
 		</div>
@@ -35,28 +35,42 @@
 			infinite: true,
 			slidesToShow: 2,
 			slidesToScroll: 2,
+
 			rows:2,
 			responsive: [
 			{
-				breakpoint: 1024,
+				breakpoint: 1200,
 				settings: {
 
 					infinite: true,
-					dots: true
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			},
+			{
+				breakpoint: 1141,
+				settings: {
+
+					
+					dots: false,
+					slidesToShow: 1,
+					slidesToScroll: 1
 				}
 			},
 			{
 				breakpoint: 600,
 				settings: {
 					slidesToShow: 1,
-					slidesToScroll: 1
+					slidesToScroll: 1,
+					dots: false,
 				}
 			},
 			{
 				breakpoint: 480,
 				settings: {
 					slidesToShow: 1,
-					slidesToScroll: 1
+					slidesToScroll: 1,
+					dots: false,
 				}
 			}
 

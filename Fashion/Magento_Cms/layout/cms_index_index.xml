@@ -2,15 +2,31 @@
 <page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 	<update handle="default_head_blocks"/>
 	<body>
+		<referenceContainer name="page.wrapper">
+			<container name="welt-pixel" after="header.container">
+				<block class="Magento\Cms\Block\Block" name="welt">
+					<arguments>
+						<argument name="block_id" xsi:type="string">welt</argument>
+					</arguments>
+				</block>
+			</container>
+			<referenceContainer name="main.content">
+				<block class="Magento\Framework\View\Element\Template" name="image.seller" template="Magento_Cms::image-seller.phtml" before="-"/>
+				<block class="Magento\Framework\View\Element\Template" name="tab.one" template="Magento_Cms::tab-one.phtml" after="image.seller" />
 
-		<referenceContainer name="main.content">
-			<block class="Magento\Framework\View\Element\Template" name="image.seller" template="Magento_Cms::image-seller.phtml" before="-"/>
-			<block class="Magento\Framework\View\Element\Template" name="tab.one" template="Magento_Cms::tab-one.phtml" after="image.seller" />
-
-			<referenceContainer name="countdown" htmlClass="countdown-first" htmlTag="div">
-				<block class="Magento\Framework\View\Element\Template" name="countdowns" template="Magento_Cms::countdown.phtml"  />
 			</referenceContainer>
-			<container name="special-item" after="countdown">
+			<referenceContainer name="countdown" htmlClass="countdown-first" htmlTag="div">
+				<block class="Magento\Framework\View\Element\Template" name="countdowns" template="Magento_Cms::countdown.phtml"  before="-"/>
+			</referenceContainer>
+			<container name="top-brand" after="countdown">
+				<block class="Magento\Framework\View\Element\Template"  template="Magento_Cms::top-brand.phtml"  before="-"/>
+
+			</container>
+			<container name="testimonial" after="top-brand">
+				<block class="Magento\Framework\View\Element\Template" name="testimonials" template="Magento_Cms::testimonial.phtml"  before="-"/>
+
+			</container>
+			<container name="special-item" after="testimonial">
 
 				<block class="Magento\Framework\View\Element\Template" name="special-items" template="Magento_Cms::special-item.phtml"  />
 			</container>
@@ -22,8 +38,8 @@
 
 				<block class="Magento\Framework\View\Element\Template" name="list-blogs" template="Magento_Cms::blog.phtml"  />
 			</container>
+		</referenceContainer> 
 
-		</referenceContainer>
 
 
 

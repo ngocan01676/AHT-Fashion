@@ -68,8 +68,8 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 
                                <?php $helper = $this->helper(AHT\Fashion\Helper\DataHelper::class); ?>
                                <?php if($helper->isProductNew($_product)): ?>
-                                <div class="new item sale">
-                                    <?php echo __('New'); ?>
+                                <div class="new">
+                                    <?php echo __('NEW'); ?>
                                 </div>
                             <?php endif; ?>
                             <?php 
@@ -87,10 +87,10 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
                                         if(isset ($stodate)){
                                             if($date <= $stodate ){
                                                ?>
-                                               <div class="sale item">
+                                               <div class="sale">
 
                                                 <?php
-                                                echo "-".round(100 - ($special / $price) * 100) . "%";
+                                                echo "SALE";
                                                 ?>              
 
 
@@ -101,10 +101,10 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
 
                                     }else{
                                        ?>
-                                       <div class="sale item">
+                                       <div class="sale">
 
                                         <?php
-                                        echo "-".round(100 - ($special / $price) * 100) . "%";
+                                        echo "SALE";
                                         ?>              
 
 
@@ -188,6 +188,7 @@ $_helper = $this->helper(Magento\Catalog\Helper\Output::class);
    </li>
 <?php endforeach; ?>
 </ol>
+<hr>
 </div>
 <?= $block->getToolbarHtml() ?>
 <?php if (!$block->isRedirectToCartEnabled()) :?>

@@ -1,0 +1,85 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+/** @var Magento\Customer\Block\Account\Customer $block */
+?>
+<?php if (!$block->customerLoggedIn()): ?>
+    <div class="area-header-account">
+        <span class="ic" ></span>
+        <p class="name"><?php echo __('My account') ?></p>
+        <?php
+        $block = $this->getLayout()->createBlock('Magento\Cms\Block\Block');
+        if($block) {
+            $block->setBlockId('header_links_block');
+        }
+        if($block){
+            echo $block->toHtml();
+        }
+        ?>
+    </div>
+    <?php else: ?>
+        <div class="area-header-account">
+            <span class="ic" ></span>
+            <p class="name" data-mage-init='{"js/customerGreeting":{}}'><?php echo __('My account') ?></p>
+            <!-- <li><p class="welcome" data-mage-init='{"js/customerGreeting":{}}'><?php //echo __('My account') ?></p></li> -->
+            
+            <?php
+            $block = $this->getLayout()->createBlock('Magento\Cms\Block\Block');
+            if($block) {
+                $block->setBlockId('header_links_block-logged');
+            }
+            ?>
+            <?php if($block): ?>
+                <ul>
+                    <li><p class="welcome" data-mage-init='{"js/customerGreeting":{}}'><?php echo __('My account') ?>
+                    <?php echo $block->toHtml(); ?>
+                </ul>
+            <?php endif ?>
+        </div>
+        
+
+        <script>
+         
+        </script>
+    <?php endif; ?>
+    <script>
+        require([
+            'jquery'
+            ], function (jQuery) {
+                (function ($)
+                {
+                    $(document).ready(function () {
+                        cloneStoreLinks();
+                        toggleAccountBox();
+                    });
+                    function cloneStoreLinks(){
+                        let ul = $('.page-wrapper .page-header.type8 .area-header-account>ul');
+                        if(ul.length > 0){
+                            ul.addClass('ul-customer').clone().appendTo('#store\\.links');
+                        }
+                    }
+                    function toggleAccountBox(){
+                        let box = $('.page-wrapper .page-header.type8 .area-header-account');
+                        if(box.length > 0){
+                            let ul = box.children('ul');
+                            box.click(function(){
+                                ul.toggleClass('show');
+                            })
+                            ul.click(function(e){
+                                e.stopPropagation();
+                            })
+                            $(window).click(function(e){
+                                if(ul.has(e.target).length == 0 && !ul.is(e.target) && !box.is(e.target) && !box.find('.ic').is(e.target) && !box.find('.name').is(e.target)){
+                                  ul.removeClass('show');
+                              }
+                          });
+                        }
+                        
+                    }
+                })(jQuery);
+            });
+        </script>

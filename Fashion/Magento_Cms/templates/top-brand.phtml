@@ -1,0 +1,138 @@
+
+<div class="top-brand container">
+	<div class="row-s">
+		<div class="col-md-12">
+
+			<div class="main-contents">
+				<div class="content-seller"><h3>TOP</h3></div>
+				<div class="move-center">
+					<img class="images left" src="<?php echo $block->getViewFileUrl('images/left.png'); ?>" />
+					<span>BRANDS</span>
+					<img class="images right" src="<?php echo $block->getViewFileUrl('images/right.png'); ?>" />
+				</div>
+			</div>
+			<hr/>
+
+
+
+		<div class="test-tab">
+			<ul class="tabs">
+				<li class="tab-link current" data-tab="tab-11"><img src="<?php echo $block->getViewFileUrl('images/brand1.png'); ?>" /></li>
+				<li class="tab-link" data-tab="tab-12"><img src="<?php echo $block->getViewFileUrl('images/brand2.png'); ?>" /></li>
+				<li class="tab-link" data-tab="tab-13"><img src="<?php echo $block->getViewFileUrl('images/brand3.png'); ?>" /></li>
+				<li class="tab-link" data-tab="tab-14"><img src="<?php echo $block->getViewFileUrl('images/brand4.png'); ?>" /></li>
+				<li class="tab-link" data-tab="tab-15"><img src="<?php echo $block->getViewFileUrl('images/brand5.png'); ?>" /></li>
+				<li class="tab-link" data-tab="tab-16"><img src="<?php echo $block->getViewFileUrl('images/brand6.png'); ?>" /></li>
+
+			</ul>
+
+			<div id="tab-11" class="tab-content current">
+				<?php 
+				echo $this->getLayout()
+				->createBlock('Magento\Cms\Block\Block')
+				->setBlockId('red')
+				->toHtml();
+				?>
+			</div>
+			<div id="tab-12" class="tab-content">
+				<?php 
+				echo $this->getLayout()
+				->createBlock('Magento\Cms\Block\Block')
+				->setBlockId('red')
+				->toHtml();
+				?>
+			</div>
+			<div id="tab-13" class="tab-content">
+				<?php 
+				echo $this->getLayout()
+				->createBlock('Magento\Cms\Block\Block')
+				->setBlockId('red')
+				->toHtml();
+				?>
+			</div>
+			<div id="tab-14" class="tab-content">
+				<?php 
+				echo $this->getLayout()
+				->createBlock('Magento\Cms\Block\Block')
+				->setBlockId('red')
+				->toHtml();
+				?>
+			</div>
+			<div id="tab-15" class="tab-content">
+				<?php 
+				echo $this->getLayout()
+				->createBlock('Magento\Cms\Block\Block')
+				->setBlockId('red')
+				->toHtml();
+				?>
+			</div>
+			<div id="tab-16" class="tab-content">
+				<?php 
+				echo $this->getLayout()
+				->createBlock('Magento\Cms\Block\Block')
+				->setBlockId('red')
+				->toHtml();
+				?>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+</div>
+
+
+
+<script>
+	require(['jquery', 'owl'], function ($) {
+		$('ul.tabs li').click(function(){
+			var tab_id = $(this).attr('data-tab');
+
+			$('ul.tabs li').removeClass('current');
+			$('.tab-content').removeClass('current');
+
+			$(this).addClass('current');
+			$("#"+tab_id).addClass('current');
+		});
+
+		$('.top-brand .product-items.widget-product-grid').addClass('owl-carousel owl-theme owl-themes');
+		$('.top-brand .product-item').addClass('item');
+
+		$('.owl-themes').owlCarousel({
+            // stagePadding: 50,
+            loop:true,
+            dots:false,
+            margin:30,
+            nav:true,
+            autoplay: false,
+            autoHeight: true,
+            autoplayTimeout: 2000,
+            smartSpeed: 800,
+            responsive:{
+            	0:{
+            		items:1,
+            		nav:false
+
+            	},
+            	480:{
+            		items:2,
+            		nav:false
+            	},
+            	640:{
+            		items:2,
+            		nav:false
+
+            	},
+            	1040:{
+            		items:4,
+            		nav:false,
+            	},
+
+            	1300:{
+            		items:4,
+            		nav:true,
+            	}
+            }
+        });
+	});
+</script>

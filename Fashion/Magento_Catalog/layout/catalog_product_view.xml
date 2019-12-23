@@ -1,18 +1,28 @@
 <?xml version="1.0"?>
 <page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
 	<body>
 		<referenceBlock name="product.info.sku" remove="true" />
-
-
 		<referenceContainer name="content">
 			<referenceContainer name="product.info.main">
 				<container name="product-share" after="-" htmlClass="product-share" htmlTag="div">
-		            <block class="Magento\Framework\View\Element\Template" template="Magento_Catalog::html/product-share.phtml" />
-
+					<block class="Magento\Catalog\Block\Product\View" template="Magento_Catalog::html/product-share.phtml" />
 				</container>
-				
 			</referenceContainer>
-		</referenceContainer>
+			<referenceBlock name="product.info.details">
+				<referenceBlock name="product.info.description">
+					<arguments>
+						<argument name="title" translate="true" xsi:type="string">Description</argument>
+					</arguments>
+				</referenceBlock>
+				<referenceBlock name="product.attributes" >
+					<arguments>
+						<argument translate="true" name="title" xsi:type="string">Information</argument>
 
+					</arguments>
+				</referenceBlock>
+			</referenceBlock>
+		</referenceContainer>
+		<move element="product.info.stock.sku" destination="product.info.options.wrapper.bottom" after="product.info.addtocart" />
 	</body>
 </page>

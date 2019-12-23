@@ -1,0 +1,109 @@
+<div class="testimonial">
+  <div class="owl-slider container-virtual">
+    <div  class="owl-carousel testimonial-slider">
+
+
+      <div class="item">
+        <div class="avatar">
+          <img class="images" src="<?php echo $block->getViewFileUrl('images/avatar.jpg'); ?>" />
+          <div class="left">"</div>
+
+        </div>
+        <div class="content">
+          <div class="title">
+            <p class="first">testimonials</p>
+            <p class="last">Customer & Partner talk about us!</p>
+            <hr>
+          </div>
+          <div class="contents">
+            
+            <div class="right"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h3>- Tinna Sweet -</h3></div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="avatar">
+          <img class="images" src="<?php echo $block->getViewFileUrl('images/avatar.jpg'); ?>" />
+          <div class="left">"</div>
+
+        </div>
+        <div class="content">
+          <div class="title">
+            <p class="first">testimonials</p>
+            <p class="last">Customer & Partner talk about us!</p>
+            <hr>
+          </div>
+          <div class="contents">
+            
+            <div class="right"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h3>- Tinna Sweet -</h3></div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="avatar">
+          <img class="images" src="<?php echo $block->getViewFileUrl('images/avatar.jpg'); ?>" />
+          <div class="left">"</div>
+
+        </div>
+        <div class="content">
+          <div class="title">
+            <p class="first">testimonials</p>
+            <p class="last">Customer & Partner talk about us!</p>
+            <hr>
+          </div>
+          <div class="contents">
+            
+            <div class="right"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h3>- Tinna Sweet -</h3></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+
+	require(['jquery','owl'], function ($) {
+
+
+		jQuery(".testimonial-slider").owlCarousel({
+			autoplay: false,
+			lazyLoad: true,
+			loop: true,
+			margin: 20,
+   /*
+  animateOut: 'fadeOut',
+  animateIn: 'fadeIn',
+  */
+  responsiveClass: true,
+  autoHeight: true,
+  autoplayTimeout: 7000,
+  smartSpeed: 800,
+  nav: false,
+  responsive: {
+  	0: {
+  		items: 1
+  	},
+
+  	600: {
+  		items: 1
+  	},
+
+  	1024: {
+  		items: 1
+  	},
+
+  	1366: {
+  		items: 1
+  	}
+  }
+});
+
+	});
+</script>

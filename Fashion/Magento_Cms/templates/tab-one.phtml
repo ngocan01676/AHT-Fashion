@@ -1,5 +1,5 @@
 
-<div class="container seller-tab-one">
+<div class="seller-tab-one">
 	<div class="row-s">
 		<div class="col-md-12">
 
@@ -13,16 +13,16 @@
 			</div>
 			<hr/>
 
-			<div class="product data items"
+<!-- 			<div class="product data items"
 			data-mage-init='{"mage/tabs": {"openedState": "active", "animate": {"duration": 500}, "active": 0, "disabledState": "disabled"}}'>
 			<div class="item title" data-role="collapsible">
 				<a class="switch" data-toggle="trigger" href="#tab-cars">BEST SELLER</a>
 			</div>
 			<div id="tab-cars" class="item content" data-role="content">        <?php
-			echo $this->getLayout()
-			->createBlock('Magento\Cms\Block\Block')
-			->setBlockId('best-seller1')
-			->toHtml();
+			// echo $this->getLayout()
+			// ->createBlock('Magento\Cms\Block\Block')
+			// ->setBlockId('red')
+			// ->toHtml();
 			?></div>
 
 			<div class="item title" data-role="collapsible">
@@ -32,16 +32,16 @@
 				
 				<?php
 
-				$check=$this->getLayout()
-				->createBlock('Magento\Cms\Block\Block')
-				->setBlockId('best-seller2')
-				->toHtml();
-				if(!$check)
-				{
-					echo "There is no Products";
-				}else{
-					echo $check;
-				}
+				// $check=$this->getLayout()
+				// ->createBlock('Magento\Cms\Block\Block')
+				// ->setBlockId('red')
+				// ->toHtml();
+				// if(!$check)
+				// {
+				// 	echo "There is no Products";
+				// }else{
+				// 	echo $check;
+				// }
 
 
 				?>
@@ -53,12 +53,47 @@
 			<div id="tab-music" class="item content" data-role="content">
 
 				<?php 
+				// echo $this->getLayout()
+				// ->createBlock('Magento\Cms\Block\Block')
+				// ->setBlockId('red')
+				// ->toHtml();
+				?>
+			</div>
+		</div> -->
+
+		<div class="test-tab">
+			<ul class="tabs">
+				<li class="tab-link current" data-tab="tab-1">BEST SELLER</li>
+				<li class="tab-link" data-tab="tab-2">ON SALE</li>
+				<li class="tab-link" data-tab="tab-3">MOST VIEWED</li>
+
+			</ul>
+
+			<div id="tab-1" class="tab-content current">
+				<?php 
 				echo $this->getLayout()
 				->createBlock('Magento\Cms\Block\Block')
-				->setBlockId('best-seller1')
+				->setBlockId('red')
 				->toHtml();
 				?>
 			</div>
+			<div id="tab-2" class="tab-content">
+				<?php 
+				echo $this->getLayout()
+				->createBlock('Magento\Cms\Block\Block')
+				->setBlockId('red')
+				->toHtml();
+				?>
+			</div>
+			<div id="tab-3" class="tab-content">
+				<?php 
+				echo $this->getLayout()
+				->createBlock('Magento\Cms\Block\Block')
+				->setBlockId('red')
+				->toHtml();
+				?>
+			</div>
+
 		</div>
 	</div>
 
@@ -69,6 +104,16 @@
 
 <script>
 	require(['jquery', 'owl'], function ($) {
+
+		$('ul.tabs li').click(function(){
+			var tab_id = $(this).attr('data-tab');
+
+			$('ul.tabs li').removeClass('current');
+			$('.tab-content').removeClass('current');
+
+			$(this).addClass('current');
+			$("#"+tab_id).addClass('current');
+		});
 
 		$('.seller-tab-one .product-items.widget-product-grid').addClass('owl-carousel owl-theme owl-themes');
 		$('.seller-tab-one .product-item').addClass('item');
@@ -85,13 +130,27 @@
             smartSpeed: 800,
             responsive:{
             	0:{
-            		items:1
+            		items:1,
+            		nav:false
+
             	},
-            	600:{
-            		items:2
+            	480:{
+            		items:1,
+            		nav:false
             	},
-            	1000:{
-            		items:3
+            	640:{
+            		items:2,
+            		nav:false
+
+            	},
+            	1040:{
+            		items:4,
+            		nav:false,
+            	},
+
+            	1300:{
+            		items:4,
+            		nav:true,
             	}
             }
         });

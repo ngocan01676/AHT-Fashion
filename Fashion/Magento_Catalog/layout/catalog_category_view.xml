@@ -12,11 +12,17 @@
 			<block class="Magento\Framework\View\Element\Template" name="content.lefts.bar" template="Magento_Catalog::bar/bar.phtml" before="-"/>
 			<block class="Magento\Framework\View\Element\Template" name="scolltotop" template="Magento_Theme::html/footer/scrolltotop.phtml" after="-"/>
 
+			<referenceBlock name="sidebar.main">
+				<block class="Magento\Framework\View\Element\Template" template="Magento_Catalog::html/sibar-left.phtml" after="-"/>
+			</referenceBlock>
+
 		</referenceBlock>
 
 
 		<!-- <referenceBlock name="breadcrumbs" remove="true" /> -->
 		<referenceBlock name="page.main.title" remove="true" />
+		<referenceBlock name="sidebar.additional" remove="true"/>
+		<referenceBlock name="product.info.review" remove="true" />
 		
 
 		

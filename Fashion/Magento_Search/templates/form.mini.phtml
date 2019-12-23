@@ -11,6 +11,11 @@
 /** @var $helper \Magento\Search\Helper\Data */
 $helper = $this->helper(\Magento\Search\Helper\Data::class);
 ?>
+
+<div class="actions-search">
+    <i class="fas fa-search"></i>
+    <i class="fas fa-times"></i>
+</div>
 <div class="block block-search">
     <div class="block block-title"><strong><?= $block->escapeHtml(__('Search')) ?></strong></div>
     <div class="block block-content">
@@ -53,3 +58,31 @@ $helper = $this->helper(\Magento\Search\Helper\Data::class);
         </form>
     </div>
 </div>
+<script>
+  require(['jquery'],function($){
+  
+
+  $('.fas.fa-search').click(function(){
+
+   
+      $(".block.block-content").css({"opacity": "1","visibility": "visible"});
+      $(".fas.fa-times").css({"opacity": "1","visibility": "visible"});
+
+  });
+
+    $('.fas.fa-times').click(function(){
+
+   
+      $(".block.block-content").css({"opacity": "0","visibility": "hidden"});
+      $(this).css({"opacity": "0","visibility": "hidden"});
+
+
+  });
+
+
+
+
+
+
+  });
+</script>
