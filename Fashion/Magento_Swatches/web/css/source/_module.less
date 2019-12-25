@@ -71,6 +71,10 @@
             &-label {
                 font-weight: @font-weight__bold;
                 position: relative;
+                text-transform: uppercase;
+                &:after{
+                    content: ':';
+                }
 
                 &.required {
                     padding-right: @indent__s;
@@ -94,6 +98,8 @@
 
             &-options {
                 margin: @indent__s 0;
+                margin-top: 20px;
+               
 
                 &:focus {
                     box-shadow: none;

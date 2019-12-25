@@ -40,8 +40,12 @@
 			</container>
 		</referenceContainer> 
 
+        
+		<referenceBlock name="top.links">
+			<referenceBlock name="register-link" remove="true" />           <!--for Create Account Link-->
 
 
+		</referenceBlock>
 
 	</body>
 </page>

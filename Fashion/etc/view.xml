@@ -196,9 +196,8 @@
 
         <!-- Gallery and magnifier theme settings. Start -->
         <var name="gallery">
-           <!--  <var name="thumbmargin">17</var> -->
-            <var name="height">597</var>
-            <var name="width">488</var>
+            <var name="thumbmargin">15</var>
+
             <var name="maxheight">597</var>
             <var name="nav">thumbs</var> <!-- Gallery navigation style (false/thumbs/dots) -->
             <var name="loop">true</var> <!-- Gallery navigation loop (true/false) -->

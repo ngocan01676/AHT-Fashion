@@ -1,299 +1,434 @@
-.swatch-attribute-label {
-    z-index: 99999;
-}
-
-.swatch-option-tooltip {
-    max-width: 0px !important;
-    max-height: 0px !important;
-    overflow: hidden;
-    min-height: 0px !important;
-    min-width: 0px !important;
-    border: none !important;
-    background: transparent !important;
-}
-
 & when (@media-common =true) {
 
 
 
+    .catalog-product-view {
 
-    .columns {
-        .column.main {
-            .product.media {
-                .fotorama__stage__shaft.fotorama__grab {
-                    // background: #efefef;
-                }
-            }
-        }
-    }
-
-
-    .product-info-main {
-
-        display: flex;
-        flex-direction: column;
-
-        .product-reviews-summary {
-            .rating-summary {
-                .rating-result {
-                    span:before {
-                        font-weight: bold;
-                        color: #ffae00;
-                    }
-                }
-            }
-
-            .reviews-actions {
-                span {
-                    text-transform: uppercase;
-                    color: #b0b0b0;
-                    font-weight: 600;
-                }
-            }
+        .fotorama__nav__shaft.fotorama__grab {
+            margin-top: -15px;
         }
 
+        .page-main {
+            .columns {
+                .column.main {
+                    padding-bottom: 0px;
 
-        .product-info-price {
-            border-bottom: none;
-            margin-bottom: 0px !important;
+                    .product-info-main {
 
-            .price-box.price-final_price {
-
-
-                display: flex !important;
-
-                .price-container.price-final_price.tax.weee {
-
-                    .price-label {
-                        display: none !important;
-                    }
-
-                    .price {
-
-                        color: #ff6633 !important;
-                        font-size: 20px;
-
-                    }
-                }
-
-                .special-price {
-                    margin-right: 20px;
-
-                    .price {
-                        color: #ff9f43 !important;
-                        font-size: 20px;
-                    }
-                }
-
-                .old-price {
-
-                    span.price-label {
-                        display: none !important;
-                    }
-
-                    .price {
-                        color: #ff9f43 !important;
-                        font-size: 20px;
-
-
-                    }
-
-                    &.price-change {
-
-                        span.price-label {
-                            display: none !important;
-                        }
-
-                        .price-container.price-final_price.tax.weee {
-
-                            .price {
-
-                                color: #575757 !important;
-                                text-decoration: line-through !important;
-
-
-                            }
-                        }
-
-                    }
-                }
-            }
-        }
-
-        .page-title-wrapper.product {
-
-
-
-
-            .page-title {
-                .base {
-                    font-size: 24px;
-                }
-            }
-
-        }
-
-        .product-social-links {
-            order: 4;
-        }
-
-        .product-add-form {
-            order: 5;
-
-            .product-options-wrapper {
-                .swatch-attribute.color {
-                    .swatch-attribute-options.clearfix {
-                        margin-top: 20px;
-
-                        .swatch-option.color {
-                            border-radius: 50%;
-
-                            &:not(:first-child) {
-
-                                margin-left: 35px;
-
-                            }
-
-
-                        }
-
-                        .swatch-attribute.size {
-                            margin-top: 20px;
-                        }
-                    }
-                }
-            }
-
-            .product-options-bottom {
-                display: flex;
-
-                .box-tocart {
-                    .fieldset {
                         display: flex;
+                        flex-direction: column;
 
-                        .field.qty {
-                            .control {
-                                .input-text.qty {
-                                    width: 100px;
-                                    height: 50px;
-                                    border-radius: 3px;
-                                    padding: 0px;
-                                }
-                            }
-                        }
-
-                        .actions {
-                            margin-left: 10px;
-                            margin-top: 28px;
-                            height: 50px;
-
-                            .action.primary.tocart {
-                                width: 180px !important;
-                                height: 50px;
-                                margin: 0;
-                                background: #ff6633;
-                                border: none;
-
-                                span {
-                                    text-transform: uppercase;
-                                    font-size: 14px;
-                                }
-
-                                &:before {
-                                    content: '\f291';
-                                    font-family: "Font Awesome 5 Free";
-                                    font-weight: 700;
-                                    margin-right: 10px;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .product-info-stock-sku {
-                    height: 50px;
-                    margin-top: 61px;
-                    margin-left: 22px;
-
-                    .stock.available {
-                        span:before {
-                            content: '\f00c';
-                            font-family: "Font Awesome 5 Free";
-                            font-weight: 700;
-                            background: #81cb5c;
-                            color: white;
-                            border-radius: 50%;
-                            margin-right: 3px;
-
-                        }
-                    }
-                }
-
-            }
-
-        }
-
-
-        .product-share {
-            order: 5;
-
-            ul {
-                list-style: none;
-                display: flex;
-                padding: 0;
-                margin: 0;
-
-                li {
-
-                    font-size: 14px;
-                    font-weight: 700;
-
-                    &:not(:first-child) {
-                        a {
-                            text-decoration: none;
-                            color: #666666;
-                            padding: 0 10px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-
-    .block-margin.block.row {
-        .block-title.title {
-            text-align: center;
-            text-transform: uppercase;
-        }
-
-        .block-content.content {
-            .block-actions {
-                display: none;
-            }
-
-            .products.wrapper.grid.products-grid {
-
-
-                .item.product.product-item {
-                    margin: 0;
-
-                    .product-item-info {
-                        text-align: center;
-
-                        .field.choice.related {
+                        .product-social-links {
                             display: none;
                         }
+
+                        .page-title-wrapper.product {
+                            .page-title {
+                                font-size: 0px;
+
+                                .base {
+                                    font-size: 25px;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+
+                        .product.attribute.overview {
+                            margin-top: 8px;
+                            margin-bottom: 0px;
+
+                            .value {
+                                p {
+                                    line-height: 24px;
+                                    font-size: 14px
+                                }
+                            }
+                        }
+
+                        .product-reviews-summary {
+                            .rating-summary {
+                                .rating-result {
+                                    span:before {
+                                        font-weight: bold;
+                                        color: #ffae00;
+                                    }
+                                }
+                            }
+
+                            .reviews-actions {
+                                span {
+                                    text-transform: uppercase;
+                                    color: #b0b0b0;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+
+
+                        .product-info-price {
+                            border-bottom: none;
+                            margin-bottom: 0px !important;
+
+                            .price-box.price-final_price {
+
+
+                                display: flex !important;
+
+                                .price-container.price-final_price.tax.weee {
+
+                                    .price-label {
+                                        display: none !important;
+                                    }
+
+                                    .price {
+
+                                        color: #ff6633 !important;
+                                        font-size: 30px;
+                                        font-weight: 700;
+
+
+                                    }
+                                }
+
+                                .special-price {
+                                    margin-right: 20px;
+
+                                    .price {
+                                        color: #ff9f43 !important;
+                                        font-size: 20px;
+                                    }
+                                }
+
+                                .old-price {
+
+                                    span.price-label {
+                                        display: none !important;
+                                    }
+
+                                    .price {
+                                        color: #ff9f43 !important;
+                                        font-size: 20px;
+
+
+                                    }
+
+                                    &.price-change {
+
+                                        span.price-label {
+                                            display: none !important;
+                                        }
+
+                                        .price-container.price-final_price.tax.weee {
+
+                                            .price {
+
+                                                color: #575757;
+                                                text-decoration: line-through ;
+                                                margin-left:18px;
+
+
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+
+                        .page-title-wrapper.product {
+
+
+
+
+                            .page-title {
+                                .base {
+                                    font-size: 24px;
+                                }
+                            }
+
+                        }
+
+                        .product-social-links {
+                            order: 4;
+                        }
+
+                        .product-add-form {
+                            order: 5;
+                            padding-top: 0px;
+
+                            .product-options-wrapper {
+                                .swatch-attribute.color {
+                                    .swatch-attribute-options.clearfix {
+                                        margin-top: 20px;
+
+                                        .swatch-option.color {
+                                            border-radius: 50%;
+
+                                            &:not(:first-child) {
+
+                                                margin-left: 35px;
+
+                                            }
+
+
+                                        }
+
+                                        .swatch-attribute.size {
+                                            margin-top: 20px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .box-tocart {
+                                .fieldset {
+                                    display: flex;
+
+                                    .field.qty {
+                                        .control {
+                                            .input-text.qty {
+                                                width: 100px;
+                                                height: 50px;
+                                                border-radius: 3px;
+                                                padding: 0px;
+                                            }
+                                        }
+                                    }
+
+                                    .up-down {
+                                        margin-left: -15px;
+                                        margin-top: 34px;
+                                        margin-right: 10px;
+                                        position: relative;
+
+                                        p {
+                                            font-size: 20px;
+                                            position: absolute;
+                                        }
+
+                                        .plus {
+                                            top: 0;
+                                            right: 0px;
+                                        }
+
+                                        p.minus {
+                                            right: 0px;
+                                            position: absolute;
+                                            top: 10px;
+                                        }
+                                    }
+
+                                    .actions {
+                                        margin-left: 10px;
+                                        margin-top: 28px;
+                                        height: 50px;
+
+                                        .action.primary.tocart {
+                                            width: 180px !important;
+                                            height: 50px;
+                                            margin: 0;
+                                            background: #ff6633;
+                                            border: none;
+
+                                            span {
+                                                text-transform: uppercase;
+                                                font-size: 14px;
+                                            }
+
+                                            &:before {
+                                                content: '\f291';
+                                                font-family: "Font Awesome 5 Free";
+                                                font-weight: 700;
+                                                margin-right: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .product-options-bottom {
+                                display: flex;
+                                height: 130px;
+
+                                .box-tocart {
+                                    .fieldset {
+                                        display: flex;
+
+                                        .field.qty {
+                                            .control {
+                                                .input-text.qty {
+                                                    border: 2px solid #d7d7d7;
+                                                    width: 100px;
+                                                    height: 50px;
+                                                    border-radius: 3px;
+                                                    padding: 0px;
+                                                    text-align: left;
+                                                    padding-left: 33px;
+                                                }
+                                            }
+                                        }
+
+                                        .actions {
+                                            margin-left: 10px;
+                                            margin-top: 28px;
+                                            height: 50px;
+
+                                            .action.primary.tocart {
+                                                width: 180px !important;
+                                                height: 50px;
+                                                margin: 0;
+                                                background: #ff6633;
+                                                border: none;
+
+                                                span {
+                                                    text-transform: uppercase;
+                                                    font-size: 14px;
+                                                }
+
+                                                &:before {
+                                                    content: '\f291';
+                                                    font-family: "Font Awesome 5 Free";
+                                                    font-weight: 700;
+                                                    margin-right: 10px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .product-info-stock-sku {
+                                    height: 50px;
+                                    margin-top: 61px;
+                                    margin-left: 22px;
+
+                                    .stock.available {
+                                        span:before {
+                                            content: '\f00c';
+                                            font-family: "Font Awesome 5 Free";
+                                            font-weight: 700;
+                                            background: #81cb5c;
+                                            color: white;
+                                            border-radius: 50%;
+                                            margin-right: 3px;
+
+                                        }
+                                    }
+                                }
+
+                            }
+
+                        }
+
+
+                        .product-share {
+                            order: 5;
+
+                            ul {
+                                list-style: none;
+                                display: flex;
+                                padding: 0;
+                                margin: 0;
+
+                                li {
+
+                                    &:nth-child(2){
+                                        margin-left: 20px;
+                                    }
+
+                                    font-size: 14px;
+                                    font-weight: 700;
+
+                                    &:not(:first-child) {
+                                        a {
+                                            text-decoration: none;
+                                            color: #666666;
+                                            padding: 0 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
 
-                }
 
-                .owl-controls {
-                    display: none;
+                    .product.media {
+                        .fotorama__thumb-border {
+
+                            border: 2px solid #c8bebe;
+
+                        }
+
+                        .fotorama__stage__frame .fotorama__img {
+                            width: 100%;
+                            height: 100%;
+
+                        }
+                    }
+
+
+
+                    .block-margin.block.row {
+                        margin-bottom: 0px;
+
+                        .block-title.title {
+                            text-align: center;
+                            text-transform: uppercase;
+                        }
+
+                        .block-content.content {
+                            .block-actions {
+                                display: none;
+                            }
+
+                            .products.wrapper.grid.products-grid {
+                                padding-bottom: 0px;
+
+
+                                .products.list.items.product-items {
+                                    margin-bottom: 0px;
+
+                                    .owl-stage-outer {
+                                        padding-bottom: 0px;
+                                    }
+
+                                    .item.product.product-item {
+                                        margin: 0;
+
+                                        .product-item-info {
+                                            text-align: center;
+
+                                            .product-image-container {
+                                                width: 100% !important;
+                                            }
+
+                                            .field.choice.related {
+                                                display: none;
+                                            }
+                                        }
+
+                                    }
+
+                                    .owl-controls {
+                                        display: none;
+                                    }
+
+                                }
+
+
+
+                            }
+                        }
+                    }
                 }
             }
         }
+
+
+
     }
+
+
+
 
 
 
@@ -310,8 +445,10 @@
 
 
     .product.info.detailed {
+
         .product.data.items {
             text-align: center;
+            padding-top: 50px;
 
             .item.title {
 
@@ -336,7 +473,7 @@
                     &.active {
 
                         .data.switch {
-                            color: red !important;
+                            color: #ff6633 !important;
 
                             .counter {
                                 color: red;
@@ -351,8 +488,8 @@
 
                             content: '';
                             width: 30% !important;
-                            height: 3px;
-                            background: red;
+                            height: 2px;
+                            background: #ff6633;
                             bottom: 0;
                             left: 35%;
                             position: absolute;
@@ -364,8 +501,8 @@
 
                             content: '';
                             width: 30% !important;
-                            height: 3px;
-                            background: red;
+                            height: 2px;
+                            background: #ff6633;
                             bottom: 0;
                             left: 35%;
                             position: absolute;
@@ -386,6 +523,26 @@
                 text-align: left;
                 padding-left: 0px;
                 padding-right: 0px;
+
+                &#additional {
+                    table#product-attribute-specs-table {
+                        margin: 0 auto;
+                        width: 38%;
+                    }
+
+                }
+
+
+
+                .product.attribute.description {
+                    .value {
+                        p {
+                            line-height: 24px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+
             }
         }
     }
@@ -394,15 +551,597 @@
 }
 
 
-@media only screen and(min-width: 1170px) {
-    // .product.media {
-    //     width: 488px !important;
-    // }
-    // .fotorama__stage__shaft{
-    //     max-width: 100% !important;
-    // }
+@media only screen and(min-width: 1200px) {
 
-    // .product-info-main {
-    //     width: 570px !important;
-    // }
+
+
+    .catalog-product-view {
+        .page-wrapper {
+            .page-main {
+                .columns {
+                    margin-top: 30px;
+
+                    .column.main {
+                        .product.media {
+                            width: 600px;
+                        }
+
+                        .product-info-main {
+                            width: 570px;
+                            padding-left: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and(min-width:320px) and (max-width: 480px) {
+    .catalog-product-view {
+
+
+        .page-main {
+            .columns {
+                .column.main {
+
+                    .product-info-main {
+
+                        .product-add-form {
+                            order: 5;
+                            padding-top: 0px;
+
+                            .product-options-wrapper {
+                                .swatch-attribute.color {
+                                    .swatch-attribute-options.clearfix {
+                                        margin-top: 20px;
+
+                                        .swatch-option.color {
+                                            border-radius: 50%;
+
+                                            &:not(:first-child) {
+
+                                                margin-left: 35px;
+
+                                            }
+
+
+                                        }
+
+                                        .swatch-attribute.size {
+                                            margin-top: 20px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .box-tocart {
+                                .fieldset {
+                                    display: flex;
+
+                                    .field.qty {
+                                        .control {
+                                            .input-text.qty {
+                                                width: 100px;
+                                                height: 50px;
+                                                border-radius: 3px;
+                                                padding: 0px;
+                                            }
+                                        }
+                                    }
+
+                                    .up-down {
+                                        margin-left: -15px;
+                                        margin-top: 34px;
+                                        margin-right: 10px;
+                                        position: relative;
+
+                                        p {
+                                            font-size: 20px;
+                                            position: absolute;
+                                        }
+
+                                        .plus {
+                                            top: 0;
+                                            right: 0px;
+                                        }
+
+                                        p.minus {
+                                            right: 0px;
+                                            position: absolute;
+                                            top: 10px;
+                                        }
+                                    }
+
+                                    .actions {
+                                        margin-left: 10px;
+                                        margin-top: 28px;
+                                        height: 50px;
+
+                                        .action.primary.tocart {
+                                            width: 180px !important;
+                                            height: 50px;
+                                            margin: 0;
+                                            background: #ff6633;
+                                            border: none;
+
+                                            span {
+                                                text-transform: uppercase;
+                                                font-size: 14px;
+                                            }
+
+                                            &:before {
+                                                content: '\f291';
+                                                font-family: "Font Awesome 5 Free";
+                                                font-weight: 700;
+                                                margin-right: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .product-options-bottom {
+                                display: flex;
+                                flex-direction: column;
+                                height: auto;
+
+                                .box-tocart {
+                                    margin-bottom: 0px;
+
+                                    .fieldset {
+                                        display: flex;
+
+                                        .field.qty {
+                                            .control {
+                                                .input-text.qty {
+                                                    border: 2px solid #d7d7d7;
+                                                    width: 100px;
+                                                    height: 50px;
+                                                    border-radius: 3px;
+                                                    padding: 0px;
+                                                    text-align: left;
+                                                    padding-left: 33px;
+                                                }
+                                            }
+                                        }
+
+                                        .actions {
+                                            margin-left: 10px;
+                                            margin-top: 28px;
+                                            height: 50px;
+
+                                            .action.primary.tocart {
+                                                width: 180px !important;
+                                                height: 50px;
+                                                margin: 0;
+                                                background: #ff6633;
+                                                border: none;
+
+                                                span {
+                                                    text-transform: uppercase;
+                                                    font-size: 14px;
+                                                }
+
+                                                &:before {
+                                                    content: '\f291';
+                                                    font-family: "Font Awesome 5 Free";
+                                                    font-weight: 700;
+                                                    margin-right: 10px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .product-info-stock-sku {
+                                    height: 50px;
+                                    margin-top: 0px;
+                                    margin-left: 0px;
+
+                                    .stock.available {
+                                        span:before {
+                                            content: '\f00c';
+                                            font-family: "Font Awesome 5 Free";
+                                            font-weight: 700;
+                                            background: #81cb5c;
+                                            color: white;
+                                            border-radius: 50%;
+                                            margin-right: 3px;
+
+                                        }
+                                    }
+                                }
+
+                            }
+
+                        }
+
+
+                    }
+
+
+
+
+
+
+
+                }
+            }
+        }
+
+
+
+    }
+}
+
+@media (min-width: 992px) {
+    .catalog-product-view {
+
+
+        .page-main {
+            max-width: 960px;
+        }
+
+
+
+    }
+}
+
+
+@media only screen and(min-width: 768px) and (max-width: 1199px) {
+
+    .catalog-product-view {
+
+
+        .page-main {
+            .columns {
+                .column.main {
+                    margin-top: 15px;
+                    padding-bottom: 0px;
+
+                    .product-info-main {
+
+                        display: flex;
+                        flex-direction: column;
+
+                        .product-social-links {
+                            display: none;
+                        }
+
+                        .page-title-wrapper.product {
+                            .page-title {
+                                font-size: 0px;
+
+                                .base {
+                                    font-size: 25px;
+                                    font-weight: 500;
+                                }
+                            }
+                        }
+
+                        .product.attribute.overview {
+                            display: none;
+                            margin-top: 8px;
+                            margin-bottom: 0px;
+
+                            .value {
+                                p {
+                                    line-height: 24px;
+                                    font-size: 14px
+                                }
+                            }
+                        }
+
+                        .product-reviews-summary {
+                            .rating-summary {
+                                .rating-result {
+                                    span:before {
+                                        font-weight: bold;
+                                        color: #ffae00;
+                                    }
+                                }
+                            }
+
+                            .reviews-actions {
+                                span {
+                                    text-transform: uppercase;
+                                    color: #b0b0b0;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+
+
+                        .product-info-price {
+                            border-bottom: none;
+                            margin-bottom: 0px !important;
+
+                            .price-box.price-final_price {
+
+
+                                display: flex !important;
+
+                                .price-container.price-final_price.tax.weee {
+
+                                    .price-label {
+                                        display: none !important;
+                                    }
+
+                                    .price {
+
+                                        color: #ff6633 !important;
+                                        font-size: 20px;
+
+                                    }
+                                }
+
+                                .special-price {
+                                    margin-right: 20px;
+
+                                    .price {
+                                        color: #ff9f43 !important;
+                                        font-size: 20px;
+                                    }
+                                }
+
+                                .old-price {
+
+                                    span.price-label {
+                                        display: none !important;
+                                    }
+
+                                    .price {
+                                        color: #ff9f43 !important;
+                                        font-size: 20px;
+
+
+                                    }
+
+                                    &.price-change {
+
+                                        span.price-label {
+                                            display: none !important;
+                                        }
+
+                                        .price-container.price-final_price.tax.weee {
+
+                                            .price {
+
+                                                color: #575757 !important;
+                                                text-decoration: line-through !important;
+
+
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+
+                        .page-title-wrapper.product {
+
+
+
+
+                            .page-title {
+                                .base {
+                                    font-size: 24px;
+                                }
+                            }
+
+                        }
+
+                        .product-social-links {
+                            order: 4;
+                        }
+
+                        .product-add-form {
+                            order: 5;
+                            padding-top: 0px;
+
+                            .product-options-wrapper {
+                                .swatch-attribute.color {
+                                    .swatch-attribute-options.clearfix {
+                                        margin-top: 20px;
+
+                                        .swatch-option.color {
+                                            border-radius: 50%;
+
+                                            &:not(:first-child) {
+
+                                                margin-left: 35px;
+
+                                            }
+
+
+                                        }
+
+                                        .swatch-attribute.size {
+                                            margin-top: 20px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .box-tocart {
+                                margin: 0px;
+
+                                .fieldset {
+                                    display: flex;
+
+                                    .field.qty {
+                                        .control {
+                                            .input-text.qty {
+                                                width: 100px;
+                                                height: 50px;
+                                                border-radius: 3px;
+                                                padding: 0px;
+                                            }
+                                        }
+                                    }
+
+                                    .up-down {
+                                        margin-left: -15px;
+                                        margin-top: 34px;
+                                        margin-right: 10px;
+                                        position: relative;
+
+                                        p {
+                                            font-size: 20px;
+                                            position: absolute;
+                                        }
+
+                                        .plus {
+                                            top: 0;
+                                            right: 0px;
+                                        }
+
+                                        p.minus {
+                                            right: 0px;
+                                            position: absolute;
+                                            top: 10px;
+                                        }
+                                    }
+
+                                    .actions {
+                                        margin-left: 10px;
+                                        margin-top: 28px;
+                                        height: 50px;
+
+                                        .action.primary.tocart {
+                                            width: 180px !important;
+                                            height: 50px;
+                                            margin: 0;
+                                            background: #ff6633;
+                                            border: none;
+
+                                            span {
+                                                text-transform: uppercase;
+                                                font-size: 14px;
+                                            }
+
+                                            &:before {
+                                                content: '\f291';
+                                                font-family: "Font Awesome 5 Free";
+                                                font-weight: 700;
+                                                margin-right: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .product-options-bottom {
+                                display: flex;
+                                height: auto;
+                                flex-direction: column;
+
+                                .box-tocart {
+                                    .fieldset {
+                                        display: flex;
+
+                                        .field.qty {
+                                            .control {
+                                                .input-text.qty {
+                                                    border: 2px solid #d7d7d7;
+                                                    width: 100px;
+                                                    height: 50px;
+                                                    border-radius: 3px;
+                                                    padding: 0px;
+                                                    text-align: left;
+                                                    padding-left: 33px;
+                                                }
+                                            }
+                                        }
+
+                                        .actions {
+                                            margin-left: 10px;
+                                            margin-top: 28px;
+                                            height: 50px;
+
+                                            .action.primary.tocart {
+                                                width: 180px !important;
+                                                height: 50px;
+                                                margin: 0;
+                                                background: #ff6633;
+                                                border: none;
+
+                                                span {
+                                                    text-transform: uppercase;
+                                                    font-size: 14px;
+                                                }
+
+                                                &:before {
+                                                    content: '\f291';
+                                                    font-family: "Font Awesome 5 Free";
+                                                    font-weight: 700;
+                                                    margin-right: 10px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .product-info-stock-sku {
+                                    height: 50px;
+                                    margin-top: 0px;
+                                    margin-left: 0px;
+
+                                    .stock.available {
+                                        span:before {
+                                            content: '\f00c';
+                                            font-family: "Font Awesome 5 Free";
+                                            font-weight: 700;
+                                            background: #81cb5c;
+                                            color: white;
+                                            border-radius: 50%;
+                                            margin-right: 3px;
+
+                                        }
+                                    }
+                                }
+
+                            }
+
+                        }
+
+
+                        .product-share {
+                            order: 5;
+
+                            ul {
+                                list-style: none;
+                                display: flex;
+                                padding: 0;
+                                margin: 0;
+
+                                li {
+
+                                    font-size: 14px;
+                                    font-weight: 700;
+
+                                    &:not(:first-child) {
+                                        a {
+                                            text-decoration: none;
+                                            color: #666666;
+                                            padding: 0 10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+
+
+    }
+
+
 }
